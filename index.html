@@ -3,8 +3,18 @@
 <head>
   <title>My GitHub Pages Site</title>
   <style>
+    .image-group {
+      display: flex; /* 이미지를 가로로 배치하기 위해 flexbox를 사용 */
+    }
+    
     .image-container {
-      max-width: 50%; /* 이미지 컨테이너의 최대 너비를 100%로 설정 */
+      max-width: 50%; /* 이미지 컨테이너의 최대 너비를 50%로 설정하여 두 개씩 배치 */
+      padding: 10px; /* 이미지 사이의 간격을 설정 */
+      box-sizing: border-box; /* padding을 너비에 포함시킴 */
+    }
+    
+    .image-container img {
+      max-width: 100%; /* 이미지가 컨테이너에 맞게 조절되도록 설정 */
       height: auto; /* 높이를 자동으로 조절하여 비율 유지 */
     }
   </style>
@@ -12,11 +22,22 @@
 <body>
   <h1>This App's App Store URL </h1>
   <a href="https://apps.apple.com/kr/app/ccgg-lol-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%A0%84%EC%A0%81-%EA%B2%80%EC%83%89/id6459993426">https://apps.apple.com/kr/app/ccgg-lol-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%A0%84%EC%A0%81-%EA%B2%80%EC%83%89/id6459993426</a>
-  <div>
-    <img class="image-container" src="https://aphaki.github.io/lsy-website/images/1.png" alt="이미지 1">
-    <img class="image-container" src="https://aphaki.github.io/lsy-website/images/2.png" alt="이미지 2">
-    <img class="image-container" src="https://aphaki.github.io/lsy-website/images/3.png" alt="이미지 3">
-    <img class="image-container" src="https://aphaki.github.io/lsy-website/images/4.png" alt="이미지 4">
+  <div class="image-group">
+    <div class="image-container">
+      <img src="https://aphaki.github.io/lsy-website/images/1.png" alt="이미지 1">
+    </div>
+    <div class="image-container">
+      <img src="https://aphaki.github.io/lsy-website/images/2.png" alt="이미지 2">
+    </div>
+  </div>
+  
+  <div class="image-group">
+    <div class="image-container">
+      <img src="https://aphaki.github.io/lsy-website/images/3.png" alt="이미지 3">
+    </div>
+    <div class="image-container">
+      <img src="https://aphaki.github.io/lsy-website/images/4.png" alt="이미지 4">
+    </div>
   </div>
 </body>
 </html>
